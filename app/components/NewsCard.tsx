@@ -17,7 +17,7 @@ export interface NewsArticle {
 const NewsCard = async ({news}:{news: NewsArticle}) => {
 
   return (
-    <div key={news.id}>
+    <div>
       <h3>{news.title}</h3>
       <small>{news.publicationTime}</small>
       <p>{news.content}</p>
