@@ -27,7 +27,7 @@ const NewsCard = async ({ news }: { news: NewsArticle }) => {
         </span>
         <div>
           <Link href={`/news/view/${news.id}`}>
-            <p className="font-bold text-xl mb-2">{news.title}</p>
+            <p className="font-bold text-xl mb-2 capitalize">{news.title}</p>
           </Link>
         </div>
         <p className="text-gray-700 text-base line-clamp-4">
