@@ -1,7 +1,7 @@
+import BackButton from "@/app/components/BackButton";
 import { NewsArticle, Response } from "@/app/components/NewsCard";
 import { fetchData } from "@/app/utils/utils";
 import dayjs from "dayjs";
-import Link from "next/link";
 
 const ViewNews = async ({ params }: { params: { id: number } }) => {
   const data = await fetchData<Response<NewsArticle>>(
@@ -15,11 +15,7 @@ const ViewNews = async ({ params }: { params: { id: number } }) => {
     <div className="min-h-screen">
       <div className="max-w-3xl mx-auto py-8 px-4">
         <div className="flex items-center mb-4">
-          <Link href="/">
-            <p className="text-3xl font-bold text-black-800 hover:underline">
-              ←
-            </p>
-          </Link>
+          <BackButton />
         </div>
         <h1 className="text-3xl font-bold mb-4 text-center capitalize">
           {news.title}
